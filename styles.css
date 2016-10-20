@@ -1,12 +1,14 @@
 div {
   border: 1px solid red;
 }
+
 html, body{
   font-family: "San Francisco", "Helvetica Neue", sans-serif;
   margin: 0;
   padding: 0;
   font-size: 15px;
 }
+
 .containerleft {
     display: inline-block;
     position: fixed;
@@ -16,6 +18,25 @@ html, body{
     border: 2px dotted black;
     float: left;
 }
+
+.header {
+  margin-top: 10px;
+  margin-bottom: 40px;
+}
+
+.main {
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+
+.profilepic {
+  width: 170px;
+  height: 170px;
+  border-radius: 200px;
+
+}
+
 .containerright {
   position: fixed;
   top: 0;
@@ -25,6 +46,7 @@ html, body{
   float: left;
   overflow: scroll;
   }
+
   .info {
     padding: 0 10px 0 10px;
     text-align: left;
