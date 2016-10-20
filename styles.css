@@ -1,0 +1,31 @@
+div {
+  border: 1px solid red;
+}
+html, body{
+  font-family: "San Francisco", "Helvetica Neue", sans-serif;
+  margin: 0;
+  padding: 0;
+  font-size: 15px;
+}
+.containerleft {
+    display: inline-block;
+    position: fixed;
+    width: 50%;
+    height: 100%;
+    background-color: #1560FB;
+    border: 2px dotted black;
+    float: left;
+}
+.containerright {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 48%;
+  float: left;
+  overflow: scroll;
+  }
+  .info {
+    padding: 0 10px 0 10px;
+    text-align: left;
+  }
