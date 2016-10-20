@@ -7,6 +7,7 @@ html, body{
   margin: 0;
   padding: 0;
   font-size: 15px;
+  box-sizing: border-box;
 }
 
 .containerleft {
@@ -15,26 +16,83 @@ html, body{
     width: 50%;
     height: 100%;
     background-color: #1560FB;
+    color: whitesmoke;
     border: 2px dotted black;
     float: left;
 }
 
 .header {
-  margin-top: 10px;
+  margin-top: 20px;
   margin-bottom: 40px;
 }
 
 .main {
-  margin-left: auto;
-  margin-right: auto;
+  margin: auto;
   width: 100%;
 }
 
 .profilepic {
+  display: block;
+  margin: auto;
   width: 170px;
   height: 170px;
   border-radius: 200px;
+  box-shadow: 0 5px 10px #0A4DD9
+}
 
+.caption {
+  display: block;
+  margin: 30px auto auto auto;
+  opacity: 0.6;
+  color: white;
+  text-align: center;
+}
+
+.introbox {
+  display: block;
+  margin: 10px auto auto auto;
+  padding: 0 20px;
+  max-width: 460px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 28px;
+}
+.button {
+    display: block;
+    position: relative;
+    width: 200px;
+    margin: 30px auto auto auto;
+    padding: 11px 24px;
+    color: white;
+    background: #1560FB;
+    border-color: white;
+    border-radius: 3px;
+    border-style: solid;
+    border-width: 2px;
+    font-weight: 700;
+    line-height: 22px;
+    text-decoration: none;
+  }
+  .button:hover {
+      display: block;
+      position: relative;
+      width: 200px;
+      margin: 30px auto auto auto;
+      padding: 11px 24px;
+      color: #1560FB;
+      background: white;
+      border-color: #1560FB;
+      border-radius: 3px;
+      border-style: solid;
+      border-width: 2px;
+      font-weight: 700;
+      line-height: 22px;
+      text-decoration: none;
+    }
+
+.button::after{
+  float: right;
+  content: '\279C';
 }
 
 .containerright {
@@ -42,7 +100,7 @@ html, body{
   top: 0;
   right: 0;
   height: 100%;
-  width: 48%;
+  width: 45%;
   float: left;
   overflow: scroll;
   }
