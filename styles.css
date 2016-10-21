@@ -1,8 +1,7 @@
-/*div {
-  border: 1px solid red;
+/** {
+  border: 2px solid red;
 }*/
-
-html, body{
+html, body {
   font-family: "San Francisco", "Helvetica Neue", sans-serif;
   margin: 0;
   padding: 0;
@@ -10,14 +9,23 @@ html, body{
   box-sizing: border-box;
 }
 
+/*@media (min-width: 768px)
 .containerleft {
-    display: inline-block;
-    position: fixed;
-    width: 50%;
-    height: 100%;
-    background-color: #1560FB;
-    color: whitesmoke;
     float: left;
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 50%;
+}*/
+
+.containerleft {
+  position: fixed;
+  width: 50%;
+  height: 100%;
+  background-color: #1560FB;
+  color: whitesmoke;
+  float: left;
 }
 
 .header {
@@ -36,7 +44,7 @@ html, body{
   width: 170px;
   height: 170px;
   border-radius: 200px;
-  box-shadow: 0 5px 10px #0A4DD9
+  box-shadow: 0 5px 10px #0A4DD9;
 }
 
 .caption {
@@ -59,10 +67,6 @@ html, body{
   word-wrap: break-word;
 }
 
-h1 {
-  /*font-size:;*/
-}
-
 .metalab {
   padding: 0 4px 2px 4px;
   color: white;
@@ -76,42 +80,44 @@ h1 {
 }
 
 .button {
-    display: block;
-    position: relative;
-    width: 200px;
-    margin: 30px auto 60px auto;
-    padding: 11px 24px;
-    color: white;
-    background: #1560FB;
-    border-color: white;
-    border-radius: 3px;
-    border-style: solid;
-    border-width: 2px;
-    font-weight: 700;
-    line-height: 22px;
-    text-decoration: none;
-  }
-  .button:hover {
-      display: block;
-      position: relative;
-      width: 200px;
-      margin: 30px auto 60px auto;
-      padding: 11px 24px;
-      color: #1560FB;
-      background: white;
-      border-color: #1560FB;
-      border-radius: 3px;
-      border-style: solid;
-      border-width: 2px;
-      font-weight: 700;
-      line-height: 22px;
-      text-decoration: none;
-    }
+  display: block;
+  position: relative;
+  width: 200px;
+  margin: 30px auto 60px auto;
+  padding: 11px 24px;
+  color: white;
+  background: #1560FB;
+  border-color: white;
+  border-radius: 3px;
+  border-style: solid;
+  border-width: 2px;
+  font-weight: 700;
+  line-height: 22px;
+  text-decoration: none;
+}
 
-.button::after{
+.button:hover {
+  display: block;
+  position: relative;
+  width: 200px;
+  margin: 30px auto 60px auto;
+  padding: 11px 24px;
+  color: #1560FB;
+  background: white;
+  border-color: #1560FB;
+  border-radius: 3px;
+  border-style: solid;
+  border-width: 2px;
+  font-weight: 700;
+  line-height: 22px;
+  text-decoration: none;
+}
+
+.button::after {
   float: right;
   content: '\279C';
 }
+
 .footer {
   display: block;
   height: 400px;
@@ -147,6 +153,7 @@ h1 {
   bottom: 20px;
   height: 27px;
 }
+
 .info-footer__social-icon--dribbble, .info-footer__social-icon--linkedin, .info-footer__social-icon--instagram, .info-footer__social-icon--github, .info-footer__social-icon--twitter {
   position: relative;
   float: right;
@@ -155,56 +162,81 @@ h1 {
   text-decoration: none;
 }
 
-.containerright {
-  position: fixed;
-  top: 0;
-  right: 0;
-  height: 100%;
-  width: 45%;
-  float: left;
-  overflow: scroll;
-  display: inline-block;
-  padding: 20px;
+@media (min-width: 768px) {
+  .containerright {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 45%;
+    float: left;
+    overflow: scroll;
   }
 
-.info {
-  padding: 0 10px 0 10px;
-  text-align: left;
+  .containerright {
+    display: inline-block;
+    padding: 20px;
   }
 
-.aboutme, .mainprojects, .notables, .experience-contain, .resume {
-  clear: both;
-  display: block;
-  margin: 40px 0 0 0;
-  overflow: auto;
-  line-height:
-}
+  /*.info {
+    padding: 0 10px 0 10px;
+    text-align: left;
+  }*/
 
-.title {
-  display: block;
-  color: #1560FB;
-  margin: 0 0 20px 0;
-  font-size: 12px;
-  font-weight: 600;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-}
+  .aboutme, .mainprojects, .notables, .experience-contain, .resume {
+    clear: both;
+    display: block;
+    margin: 40px 0 0 0;
+    overflow: auto;
+  }
 
-.skills-li {
-  font-weight: 600;
-}
+  .title {
+    display: block;
+    color: #1560FB;
+    width: 80px;
+    margin: 0 0 20px 0;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    float: left;
+  }
+  .aboutme-text, ul, .project, .notables-main {
+    display: block;
+    margin-left: 20px;
+    float: left;
+    width: 75%;
+    max-width: 500px;
+    margin: 0;
+  }
+  ul {
+    list-style-type: none;
+    clear: both;
+    padding: 0;
+  }
 
-li::before {
-  content: '\203A'
-  color: #1560FB;
-}
+  li {
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+
+  li::before {
+    position: relative;
+    margin-right: 20px;
+    content: "\203A";
+    color: #1560FB;
+    font-weight: 700;
+  }
 
   .project-title>a {
     color: black;
     font-size: 18px;
     text-decoration: none;
+    margin: 0;
   }
-
+  .project-title {
+    margin: 0;
+  }
   .experience {
     display: block;
     margin-bottom: 20px;
@@ -233,36 +265,35 @@ li::before {
   }
 
   .resume-link {
-      display: block;
-      position: relative;
-      width: 200px;
-      margin: 30px auto 60px auto;
-      padding: 11px 24px;
-      color: black;
-      background: white;
-      border-color: white;
-      border-radius: 3px;
-      border-style: solid;
-      border-width: 2px;
-      font-weight: 700;
-      line-height: 22px;
-      text-decoration: none;
-    }
-    .resume-link:hover {
-        display: block;
-        position: relative;
-        width: 200px;
-        margin: 30px auto 60px auto;
-        padding: 11px 24px;
-        color: grey;
-        background: none;
-        border: none;
-        font-weight: 700;
-        line-height: 22px;
-        text-decoration: none;
-      }
+    display: block;
+    position: relative;
+    width: 200px;
+    margin: 30px auto 60px auto;
+    color: black;
+    background: white;
+    border-color: white;
+    border-radius: 3px;
+    border-style: solid;
+    border-width: 2px;
+    font-weight: 700;
+    line-height: 22px;
+    text-decoration: none;
+  }
 
-  .resume-link::after{
+  .resume-link:hover {
+    display: block;
+    position: relative;
+    width: 200px;
+    margin: 30px auto 60px auto;
+    color: grey;
+    background: none;
+    border: none;
+    font-weight: 700;
+    line-height: 22px;
+    text-decoration: none;
+  }
+
+  .resume-link::after {
     float: right;
     content: '\279C';
     color: #1560FB;
