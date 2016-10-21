@@ -113,27 +113,41 @@ h1 {
   content: '\279C';
 }
 .footer {
+  display: block;
   height: 400px;
   margin: auto;
   padding-right: 10px;
 }
 
 .madein {
-  position: relative;
+  position: absolute;
+  left: 20px;
+  bottom: 20px;
+  height: 27px;
+}
+
+.madein-img {
   float: left;
-  margin: auto auto 10px 10px;
-  color: white;
-  text-decoration: none;
-  font-size: 10px;
-  text-align: center;
 }
 
-a {
+.madein-text {
+  float: left;
+  margin: 0 0 0 10px;
+  padding-top: 7px;
+  font-size: 12px;
   color: white;
   text-decoration: none;
+  opacity: 0.6;
 }
 
-.social,  .info-footer__social-icon--dribbble, .info-footer__social-icon--linkedin, .info-footer__social-icon--instagram, .info-footer__social-icon--github, .info-footer__social-icon--twitter {
+.social {
+  display: block;
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  height: 27px;
+}
+.info-footer__social-icon--dribbble, .info-footer__social-icon--linkedin, .info-footer__social-icon--instagram, .info-footer__social-icon--github, .info-footer__social-icon--twitter {
   position: relative;
   float: right;
   margin-left: 10px;
@@ -149,13 +163,25 @@ a {
   width: 45%;
   float: left;
   overflow: scroll;
+  display: inline-block;
+  padding: 20px;
   }
 
-  .info {
-    padding: 0 10px 0 10px;
-    text-align: left;
+.info {
+  padding: 0 10px 0 10px;
+  text-align: left;
   }
+
+.aboutme, .mainprojects, .notables, .experience-contain, .resume {
+  clear: both;
+  display: block;
+  margin: 40px 0 0 0;
+  overflow: auto;
+  line-height:
+}
+
 .title {
+  display: block;
   color: #1560FB;
   margin: 0 0 20px 0;
   font-size: 12px;
@@ -163,9 +189,47 @@ a {
   letter-spacing: 1px;
   text-transform: uppercase;
 }
+
+.skills-li {
+  font-weight: 600;
+}
+
+li::before {
+  content: '\203A'
+  color: #1560FB;
+}
+
   .project-title>a {
     color: black;
     font-size: 18px;
+    text-decoration: none;
+  }
+
+  .experience {
+    display: block;
+    margin-bottom: 20px;
+    height: 40px;
+  }
+
+  .exp-descrip {
+    float: left;
+    display: block;
+  }
+
+  .company {
+    display: block;
+    font-weight: 700;
+    line-height: 26px;
+  }
+
+  .role {
+    display: block;
+  }
+
+  .year {
+    float: right;
+    font-weight: 700;
+    line-height: 26px;
   }
 
   .resume-link {
