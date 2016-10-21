@@ -1,12 +1,12 @@
-div {
+/*div {
   border: 1px solid red;
-}
+}*/
 
 html, body{
   font-family: "San Francisco", "Helvetica Neue", sans-serif;
   margin: 0;
   padding: 0;
-  font-size: 15px;
+  font-size: 16px;
   box-sizing: border-box;
 }
 
@@ -17,23 +17,22 @@ html, body{
     height: 100%;
     background-color: #1560FB;
     color: whitesmoke;
-    border: 2px dotted black;
     float: left;
 }
 
 .header {
   margin-top: 20px;
-  margin-bottom: 40px;
+  margin-bottom: 60px;
 }
 
 .main {
-  margin: auto;
+  margin: 80px auto auto auto;
   width: 100%;
 }
 
 .profilepic {
   display: block;
-  margin: auto;
+  margin: 40px auto auto auto;
   width: 170px;
   height: 170px;
   border-radius: 200px;
@@ -44,6 +43,8 @@ html, body{
   display: block;
   margin: 30px auto auto auto;
   opacity: 0.6;
+  font-size: 12px;
+  font-weight: bold;
   color: white;
   text-align: center;
 }
@@ -53,15 +54,32 @@ html, body{
   margin: 10px auto auto auto;
   padding: 0 20px;
   max-width: 460px;
+  color: white;
   text-align: center;
-  font-weight: bold;
-  font-size: 28px;
+  word-wrap: break-word;
 }
+
+h1 {
+  /*font-size:;*/
+}
+
+.metalab {
+  padding: 0 4px 2px 4px;
+  color: white;
+  border-bottom: 2px solid #A3C0FC;
+  text-decoration: none;
+}
+
+.metalab:hover {
+  background-color: #0A4DD9;
+  border-color: #A3C0FC;
+}
+
 .button {
     display: block;
     position: relative;
     width: 200px;
-    margin: 30px auto auto auto;
+    margin: 30px auto 60px auto;
     padding: 11px 24px;
     color: white;
     background: #1560FB;
@@ -77,7 +95,7 @@ html, body{
       display: block;
       position: relative;
       width: 200px;
-      margin: 30px auto auto auto;
+      margin: 30px auto 60px auto;
       padding: 11px 24px;
       color: #1560FB;
       background: white;
@@ -94,6 +112,34 @@ html, body{
   float: right;
   content: '\279C';
 }
+.footer {
+  height: 400px;
+  margin: auto;
+  padding-right: 10px;
+}
+
+.madein {
+  position: relative;
+  float: left;
+  margin: auto auto 10px 10px;
+  color: white;
+  text-decoration: none;
+  font-size: 10px;
+  text-align: center;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+.social,  .info-footer__social-icon--dribbble, .info-footer__social-icon--linkedin, .info-footer__social-icon--instagram, .info-footer__social-icon--github, .info-footer__social-icon--twitter {
+  position: relative;
+  float: right;
+  margin-left: 10px;
+  color: white;
+  text-decoration: none;
+}
 
 .containerright {
   position: fixed;
@@ -108,4 +154,42 @@ html, body{
   .info {
     padding: 0 10px 0 10px;
     text-align: left;
+  }
+
+  .resume-link {
+      display: block;
+      position: relative;
+      width: 200px;
+      margin: 30px auto 60px auto;
+      padding: 11px 24px;
+      color: black;
+      background: white;
+      border-color: white;
+      border-radius: 3px;
+      border-style: solid;
+      border-width: 2px;
+      font-weight: 700;
+      line-height: 22px;
+      text-decoration: none;
+    }
+    .resume-link:hover {
+        display: block;
+        position: relative;
+        width: 200px;
+        margin: 30px auto 60px auto;
+        padding: 11px 24px;
+        color: #1560FB;
+        background: white;
+        border-color: #1560FB;
+        border-radius: 3px;
+        border-style: solid;
+        border-width: 2px;
+        font-weight: 700;
+        line-height: 22px;
+        text-decoration: none;
+      }
+
+  .resume-link::after{
+    float: right;
+    content: '\279C';
   }
