@@ -5,7 +5,7 @@ html, body {
   font-family: "San Francisco", "Helvetica Neue", sans-serif;
   margin: 0;
   padding: 0;
-  font-size: 16px;
+  font-size: 15px;
   box-sizing: border-box;
 }
 
@@ -162,7 +162,7 @@ html, body {
   text-decoration: none;
 }
 
-@media (min-width: 768px) {
+@media screen and (min-width: 768px) {
   .containerright {
     position: fixed;
     top: 0;
@@ -173,59 +173,89 @@ html, body {
     overflow: scroll;
   }
 
+  @media (min-width: 1024px){
+    .aboutme-info, .big-project, .notables-main, .experience {
+    float: left;
+    width: 75%;
+    max-width: 500px;
+  }
+}
+
   .containerright {
     display: inline-block;
-    padding: 20px;
-  }
-
-  /*.info {
-    padding: 0 10px 0 10px;
-    text-align: left;
-  }*/
-
-  .aboutme, .mainprojects, .notables, .experience-contain, .resume {
-    clear: both;
-    display: block;
-    margin: 40px 0 0 0;
-    overflow: auto;
+    padding: 10px;
   }
 
   .title {
     display: block;
     color: #1560FB;
+    float: left;
     width: 80px;
     margin: 0 0 20px 0;
     font-size: 12px;
     font-weight: 600;
     letter-spacing: 1px;
-    text-transform: uppercase;
-    float: left;
+    text-transform: uppercase;  }
+
+  .aboutme, .mainprojects, .notables, .experience-contain, .resume {
+      clear: both;
+      display: block;
+      margin: 40px 0 0 0;
+      overflow: auto;
+      line-height: 26px;
+    }
+
+  .aboutme-info {
+    margin: 40px 0 0 20px;
   }
-  .aboutme-text, ul, .project, .notables-main {
-    display: block;
-    margin-left: 20px;
-    float: left;
-    width: 75%;
-    max-width: 500px;
+
+  p {
     margin: 0;
+    color: #313131;
+    font-weight: 400;
+    word-wrap: break-word;
   }
-  ul {
-    list-style-type: none;
-    clear: both;
+
+  .aboutme-text {
+    line-height: 26px;
+  }
+
+  .skills {
+    /*clear: both;*/
     padding: 0;
+    list-style-type: none;
   }
 
-  li {
-    font-weight: 700;
+  .skills-li {
     margin-bottom: 10px;
+    font-weight: 700;
   }
 
-  li::before {
+  .skills-li::before {
     position: relative;
+    content: '\203A';
+    bottom: 0.2ex;
     margin-right: 20px;
-    content: "\203A";
     color: #1560FB;
-    font-weight: 700;
+    font-family: "FontAwesome";
+    font-size: 16px;
+  }
+
+.big-project {
+    /*clear: both;*/
+    display: block;
+    margin: 40px 0 0 0;
+    overflow: auto;
+}
+
+  .project1 {
+    margin-left: 0;
+  }
+
+  .project, .project1 {
+    margin-bottom: 20px;
+    width: 75%;
+    line-height: 26px;
   }
 
   .project-title>a {
@@ -234,13 +264,21 @@ html, body {
     text-decoration: none;
     margin: 0;
   }
-  .project-title {
-    margin: 0;
+
+  .project-title::after {
+    content: '\279C';
+    position: relative;
+    bottom: 0.2ex;
+    margin-left: 20px;
+    color: #1560FB;
+    font-size: 12px;
   }
+
   .experience {
-    display: block;
     margin-bottom: 20px;
     height: 40px;
+    max-width: 500px;
+    margin-left: 110px;
   }
 
   .exp-descrip {
@@ -268,7 +306,8 @@ html, body {
     display: block;
     position: relative;
     width: 200px;
-    margin: 30px auto 60px auto;
+    margin-bottom: 20px;
+    margin-left: 110px;
     color: black;
     background: white;
     border-color: white;
@@ -284,7 +323,8 @@ html, body {
     display: block;
     position: relative;
     width: 200px;
-    margin: 30px auto 60px auto;
+    margin-bottom: 20px;
+    margin-left: 110px;
     color: grey;
     background: none;
     border: none;
